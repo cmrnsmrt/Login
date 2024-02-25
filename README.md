@@ -1,6 +1,6 @@
 # Login Page and User Management DB
 
-## Requirements
+## ✔️ Requirements
 
 | ID         | Requirement     |
 |--------------|-----------|
@@ -12,7 +12,7 @@
 | 6 | Lock the user out of the account after 5 incorrect login attempts |
 | 7 | Ensure good user experience by providing loading indicators during API requests |
 
-## Back-end Solution
+## 💾 Back-end Solution
 
 ### Database Solution 
 
@@ -28,12 +28,32 @@ Requirement 2 is met within the resolvers. The resolver for registering a new us
 
 Requirement 6 is met within the login resolver. Each time a login attempt is made, the amount of previous incorrect attempts is checked before verifying the password provided. The amount of attempts is also incremented every time an incorrect password is provided. The time of the last attempt is also stored so that the user is only locked out for 5 minutes.
 
-## Front-end solution
+## 💻 Front-end solution
 
 ### React solution
 
 To meet requirement 4, a React front-end has been implemented. The front-end is a simple index page that renders the App component and then either the Registration or Login component depending on which link has been selected in the navbar. Since Apollo is used for state management the index has an Apollo wrapper around the main App component.
 
-## Presentation
+### Presentation
 
 Requirement 5 is met by using bootstrap for layout and styling. This includes using the bootstrap Navbar and Form components. Requirement 7 is also met by intoducing a loading state boolean that is updated depending on if the front-end is getting data from the back-end and conditionally displaying a loading message to the user.
+
+## 🏃‍♂️ Running the solution
+
+To run the solution a MongoDB named "authdb" with the collection "users" must be created and running.
+
+From within the nodejs-backend directory run:
+
+```
+node server.js
+```
+
+From within the react-frontend directory run:
+
+```
+npm start
+```
+
+To access the application go to localhost:3001
+
+Thanks for reading 😊
