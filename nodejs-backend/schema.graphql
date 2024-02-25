@@ -5,7 +5,7 @@ type Query {
 type User {
   id: ID!
   username: String!
-  email: String!
+  email: String! 
   password: String!
   attempts: Int!
   lastLoginAttempt: String!

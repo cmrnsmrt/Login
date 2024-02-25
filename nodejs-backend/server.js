@@ -4,11 +4,8 @@ const mongoose = require('mongoose');
 const { graphqlHTTP } = require('express-graphql');
 const { makeExecutableSchema } = require('@graphql-tools/schema');
 const { mergeTypeDefs, mergeResolvers } = require('@graphql-tools/merge');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const path = require('path');
-const User = require('./models/User');
 const resolvers = require('./resolvers');
 
 const app = express();

@@ -10,6 +10,11 @@ const resolvers = {
   },
   Mutation: {
     registerUser: async (parent, { username, email, password }) => {
+      const existingUser = await User.findOne({ email });
+      if (existingUser) {
+        throw new Error('Email is already in use');
+      }
+
       const hashedPassword = await bcrypt.hash(password, 10);
       const user = new User({ username, email, password: hashedPassword });
       await user.save();

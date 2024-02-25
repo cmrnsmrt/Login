@@ -6,7 +6,6 @@ export const REGISTER_USER = gql`
       id
       username
       email
-      attempt
     }
   }
 `;
