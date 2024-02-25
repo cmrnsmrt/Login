@@ -47,7 +47,7 @@ const resolvers = {
       user.attempts = 0;
       await user.save();
 
-      const token = jwt.sign({ userId: user.id }, 'top-secret-authentication-key', { expiresIn: '1h' });
+      const token = jwt.sign({ userId: user.id }, 'top-secret-authentication-key', { expiresIn: '1h' }); 
       return token;
     },
   },
