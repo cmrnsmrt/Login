@@ -52,6 +52,7 @@ From within the react-frontend directory run:
 
 ```
 npm start
+// Accept the prompt asking if you want to run on port 3001 as 3000 is being used by the backend
 ```
 
 To access the application go to localhost:3001
